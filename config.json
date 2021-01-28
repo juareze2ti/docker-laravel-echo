@@ -1,19 +1,10 @@
-# docker-laravel-echo
-
-
-## Volumes
-- `<path-config>/config.json:/app/laravel-echo-server.json:ro`
-
-## Exemplo arquivo `<path-config>/config.json`
-
-````
 {
-	"authHost": "http://nginx",
+	"authHost": "<HOST_AUTH>",
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [],
 	"database": "redis",
 	"databaseConfig": {
-		"redis": { "host": "redis" },
+		"redis": { "host": "<HOST_REDIS>" },
 		"sqlite": {
 			"databasePath": "/database/laravel-echo-server.sqlite"
 		}
@@ -38,4 +29,3 @@
 		"allowHeaders": ""
 	}
 }
-````
